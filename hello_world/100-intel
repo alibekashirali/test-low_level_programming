@@ -1,0 +1,12 @@
+#!/bin/bash
+# Check if the C file is provided
+if [ -z "$CFILE" ]; then
+  echo "CFILE environment variable is not set"
+  exit 1
+fi
+
+# Get the file name without the extension
+FILENAME=$(basename "$CFILE" .c)
+
+# Compile the C file to generate the assembly in Intel syntax
+gcc -S -masm=intel "$CFILE" -o "${FILENAME}.s"
