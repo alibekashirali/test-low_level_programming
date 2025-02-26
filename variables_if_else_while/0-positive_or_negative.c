@@ -1,9 +1,18 @@
-#include <stdio.h>
+/*
+ * File: 0-positive_or_negative.c
+ * Auth: Your Name
+ * Desc: Prints if a randomly generated number is positive, negative, or zero.
+ */
+#include <stdio.h> /* Added stdio.h */
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point of the program.
+ *
+ * Return: Always 0 (Success).
+ */
+
 int main(void)
 {
 	int n;
