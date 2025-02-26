@@ -1,7 +1,7 @@
 /*
- * File: 2-print_alphabet.c
+ * File: 3-print_alphabets.c
  * Auth: Your Name
- * Desc: Prints the lowercase alphabet, followed by a new line.
+ * Desc: Prints the alphabet in lowercase and uppercase, followed by a new line.
  */
 #include <stdio.h>
 
@@ -16,8 +16,14 @@ int main(void)
 
 	for (c = 'a'; c <= 'z'; c++)
 	{
+		 putchar(c);
+	}
+
+	for (c = 'A'; c <= 'Z'; c++)
+	{
 		putchar(c);
 	}
+
 	putchar('\n');
 
 	return (0);
