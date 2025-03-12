@@ -10,14 +10,13 @@ void puts_half(char *str)
 {
     int length = 0, i, start;
 
-    while (str[length] != '\0')  // Find string length
+    while (str[length] != '\0')
         length++;
 
-    start = (length % 2 == 0) ? (length / 2) : ((length + 1) / 2);  // Compute starting index
+    start = (length % 2 == 0) ? (length / 2) : ((length + 1) / 2);
 
     for (i = start; i < length; i++)
-        write(1, &str[i], 1);  // Print each character using write
+        write(1, &str[i], 1);
 
-    write(1, "\n", 1);  // Print a newline at the end
+    write(1, "\n", 1);
 }
-
