@@ -1,22 +1,23 @@
 #include "main.h"
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * puts_half - Prints the second half of a string
  * @str: String to print
  */
+
 void puts_half(char *str)
 {
-    int len = 0, i;
+    int length = 0, i, start;
 
-    while (str[len] != '\0')
-        len++;
+    while (str[length] != '\0')  // Find string length
+        length++;
 
-    i = (len + 1) / 2;
-    while (str[i] != '\0')
-    {
-        putchar(str[i]);
-        i++;
-    }
-    putchar('\n');
+    start = (length % 2 == 0) ? (length / 2) : ((length + 1) / 2);  // Compute starting index
+
+    for (i = start; i < length; i++)
+        write(1, &str[i], 1);  // Print each character using write
+
+    write(1, "\n", 1);  // Print a newline at the end
 }
+
